@@ -94,7 +94,6 @@ public class PongAgent extends Agent {
         try {
             socket.receive(dgPacket);
             String str = new String(dgPacket.getData(), 0, dgPacket.getLength());
-            System.out.println("PongAgent received " + str);
             return (new SocketPacketPackage(socket, dgPacket));
         } catch (SocketException ex) {
             Logger.getLogger(PongAgent.class.getName()).log(Level.SEVERE, null, ex);
